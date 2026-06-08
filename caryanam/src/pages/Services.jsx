@@ -125,6 +125,258 @@
 //   )
 // }
 
+// import { useState } from 'react'
+// import { motion } from 'framer-motion'
+// import { NavLink } from 'react-router-dom'
+
+// const services = [
+//   {
+//     icon: '💻',
+//     title: 'Web & App Development',
+//     short: 'Custom, scalable web and mobile solutions.',
+//     description:
+//       'We build high-performance web apps, portals, and mobile applications tailored to your business goals using modern stacks.',
+//     features: [
+//       'React/Next.js, Node.js, Python',
+//       'iOS/Android cross-platform',
+//       'API-first architecture',
+//       'Secure, scalable deployments',
+//     ],
+//   },
+//   {
+//     icon: '☁️',
+//     title: 'Cloud Solutions',
+//     short: 'AWS, Azure, and Google Cloud expertise.',
+//     description:
+//       'We help businesses migrate, optimize, and manage cloud infrastructure with secure and scalable architecture.',
+//     features: [
+//       'Cloud migration',
+//       'AWS, Azure, Google Cloud',
+//       'DevOps automation',
+//       'Backup and monitoring',
+//     ],
+//   },
+//   {
+//     icon: '🧠',
+//     title: 'AI & Data Analytics',
+//     short: 'Insights and automation from your data.',
+//     description:
+//       'We turn raw data into smart dashboards, automation workflows, and AI-powered business insights.',
+//     features: [
+//       'Business intelligence dashboards',
+//       'Machine learning prototypes',
+//       'Data visualization',
+//       'Automation workflows',
+//     ],
+//   },
+//   // {
+//   //   icon: '🔒',
+//   //   title: 'Cybersecurity',
+//   //   short: 'Protect your business with 24/7 coverage.',
+//   //   description:
+//   //     'We secure your systems, applications, and data with modern cybersecurity practices and continuous monitoring.',
+//   //   features: [
+//   //     'Security audits',
+//   //     'Threat monitoring',
+//   //     'Data protection',
+//   //     'Risk assessment',
+//   //   ],
+//   // },
+//   {
+//     icon: '🤝',
+//     title: 'IT Consulting',
+//     short: 'Strategy, architecture, and roadmaps.',
+//     description:
+//       'We provide expert technology consulting to plan, improve, and scale your digital business systems.',
+//     features: [
+//       'Technology strategy',
+//       'System architecture',
+//       'Platform modernization',
+//       'Growth roadmaps',
+//     ],
+//   },
+// ]
+
+// const workSteps = [
+//   {
+//     number: '1',
+//     title: 'Discovery',
+//     text: 'We understand goals, users, and constraints.',
+//   },
+//   {
+//     number: '2',
+//     title: 'Solution Design',
+//     text: 'Architecture and success metrics aligned to ROI.',
+//   },
+//   {
+//     number: '3',
+//     title: 'Build & Test',
+//     text: 'Iterative development with quality gates.',
+//   },
+//   {
+//     number: '4',
+//     title: 'Deploy',
+//     text: 'Secure, monitored, and scalable release.',
+//   },
+//   {
+//     number: '5',
+//     title: 'Support',
+//     text: '24/7 monitoring and continuous improvements.',
+//   },
+// ]
+
+// export default function Services() {
+//   const [active, setActive] = useState(0)
+//   const selected = services[active]
+
+//   return (
+//     <section className="min-h-screen w-full bg-white px-6 py-10">
+//       <div className="mx-auto max-w-6xl">
+//         {/* Header */}
+//         <motion.div
+//           className="mx-auto max-w-3xl text-center"
+//           initial={{ opacity: 0, y: 22 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//         >
+//           <h1 className="text-4xl font-extrabold text-black md:text-5xl">
+//             Our IT Services
+//           </h1>
+
+//           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-600">
+//             From engineering to operations, Caryanam India delivers secure,
+//             scalable, and ROI-focused technology services.
+//           </p>
+
+//           <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-orange-500" />
+//         </motion.div>
+
+//         {/* Services */}
+//         <div className="mt-16 grid gap-8 lg:grid-cols-2">
+//           <div className="space-y-4">
+//             {services.map((item, index) => (
+//               <button
+//                 key={item.title}
+//                 type="button"
+//                 onClick={() => setActive(index)}
+//                 className={`flex w-full items-center gap-6 rounded-xl border p-7 text-left transition-all duration-300 ${
+//                   active === index
+//                     ? 'border-orange-500 bg-orange-50'
+//                     : 'border-slate-200 bg-slate-50 hover:border-orange-300 hover:bg-white'
+//                 }`}
+//               >
+//                 <span className="text-3xl">{item.icon}</span>
+
+//                 <span>
+//                   <span
+//                     className={`block text-lg font-bold ${
+//                       active === index ? 'text-orange-600' : 'text-black'
+//                     }`}
+//                   >
+//                     {item.title}
+//                   </span>
+
+//                   <span className="mt-2 block text-base text-slate-600">
+//                     {item.short}
+//                   </span>
+//                 </span>
+//               </button>
+//             ))}
+//           </div>
+
+//           <motion.div
+//             key={selected.title}
+//             className="min-h-[560px] rounded-2xl border border-slate-200 bg-slate-50 p-9 shadow-md"
+//             initial={{ opacity: 0, x: 18 }}
+//             animate={{ opacity: 1, x: 0 }}
+//             transition={{ duration: 0.35 }}
+//           >
+//             <div className="text-4xl">{selected.icon}</div>
+
+//             <h2 className="mt-7 text-2xl font-extrabold text-black">
+//               {selected.title}
+//             </h2>
+
+//             <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
+//               {selected.description}
+//             </p>
+
+//             <h3 className="mt-8 text-base font-bold text-orange-600">
+//               Key Features:
+//             </h3>
+
+//             <ul className="mt-5 space-y-4">
+//               {selected.features.map((feature) => (
+//                 <li
+//                   key={feature}
+//                   className="flex items-center gap-4 text-base text-slate-700"
+//                 >
+//                   <span className="font-bold text-orange-500">✓</span>
+//                   {feature}
+//                 </li>
+//               ))}
+//             </ul>
+//           </motion.div>
+//         </div>
+
+//         {/* How We Work */}
+//         <div className="mt-24 text-center">
+//           <h2 className="text-3xl font-extrabold text-black">
+//             How We Work
+//           </h2>
+
+//           <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
+//             {workSteps.map((step) => (
+//               <div key={step.number} className="flex flex-col items-center">
+//                 <div className="flex h-20 w-20 items-center justify-center rounded-full bg-orange-500 text-2xl font-bold text-white shadow-lg">
+//                   {step.number}
+//                 </div>
+
+//                 <h3 className="mt-5 text-lg font-bold text-black">
+//                   {step.title}
+//                 </h3>
+
+//                 <p className="mt-2 max-w-[190px] text-sm leading-6 text-slate-600">
+//                   {step.text}
+//                 </p>
+//               </div>
+//             ))}
+//           </div>
+//         </div>
+
+//         {/* CTA */}
+//         <div className="mt-20 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-12 text-center shadow-md">
+//           <h2 className="text-3xl font-extrabold text-black">
+//             Ready to Transform Your Business?
+//           </h2>
+
+//           <p className="mt-4 text-base text-slate-700">
+//             Speak to our experts to modernize your systems and accelerate
+//             growth.
+//           </p>
+
+//           <NavLink
+//             to="/contact"
+//             className="mt-8 inline-flex items-center justify-center rounded-full bg-orange-500 px-9 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-orange-600 hover:scale-105"
+//           >
+//             Contact Our Team
+//           </NavLink>
+//         </div>
+//       </div>
+
+//       {/* Scroll Top Button */}
+//       <button
+//         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+//         className="fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-2xl text-white shadow-lg transition-all duration-300 hover:bg-orange-600"
+//       >
+//         ↑
+//       </button>
+//     </section>
+//   )
+// }
+
+
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
@@ -169,19 +421,6 @@ const services = [
       'Automation workflows',
     ],
   },
-  // {
-  //   icon: '🔒',
-  //   title: 'Cybersecurity',
-  //   short: 'Protect your business with 24/7 coverage.',
-  //   description:
-  //     'We secure your systems, applications, and data with modern cybersecurity practices and continuous monitoring.',
-  //   features: [
-  //     'Security audits',
-  //     'Threat monitoring',
-  //     'Data protection',
-  //     'Risk assessment',
-  //   ],
-  // },
   {
     icon: '🤝',
     title: 'IT Consulting',
@@ -230,8 +469,20 @@ export default function Services() {
   const selected = services[active]
 
   return (
-    <section className="min-h-screen w-full bg-white px-6 py-10">
-      <div className="mx-auto max-w-6xl">
+    <section className="relative min-h-screen w-full overflow-hidden bg-white px-6 py-10">
+      <motion.div
+        animate={{ y: [0, -30, 0], x: [0, 20, 0] }}
+        transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
+        className="absolute left-10 top-24 h-48 w-48 rounded-full bg-orange-200/40 blur-3xl"
+      />
+
+      <motion.div
+        animate={{ y: [0, 35, 0], x: [0, -25, 0] }}
+        transition={{ repeat: Infinity, duration: 10, ease: 'easeInOut' }}
+        className="absolute right-10 top-[420px] h-56 w-56 rounded-full bg-purple-200/40 blur-3xl"
+      />
+
+      <div className="relative z-10 mx-auto max-w-6xl">
         {/* Header */}
         <motion.div
           className="mx-auto max-w-3xl text-center"
@@ -239,7 +490,11 @@ export default function Services() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-4xl font-extrabold text-black md:text-5xl">
+          <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-bold text-orange-500">
+            Services We Offer
+          </span>
+
+          <h1 className="mt-5 bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 bg-clip-text text-4xl font-extrabold text-transparent md:text-5xl">
             Our IT Services
           </h1>
 
@@ -255,17 +510,39 @@ export default function Services() {
         <div className="mt-16 grid gap-8 lg:grid-cols-2">
           <div className="space-y-4">
             {services.map((item, index) => (
-              <button
+              <motion.button
                 key={item.title}
                 type="button"
                 onClick={() => setActive(index)}
-                className={`flex w-full items-center gap-6 rounded-xl border p-7 text-left transition-all duration-300 ${
+                initial={{ opacity: 0, x: -35 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                whileHover={{ x: 8, scale: 1.02 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.1,
+                  type: 'spring',
+                  stiffness: 120,
+                }}
+                className={`group relative flex w-full items-center gap-6 overflow-hidden rounded-2xl border p-7 text-left shadow-sm transition-all duration-500 ${
                   active === index
-                    ? 'border-orange-500 bg-orange-50'
-                    : 'border-slate-200 bg-slate-50 hover:border-orange-300 hover:bg-white'
+                    ? 'border-orange-500 bg-orange-50 shadow-[0_18px_45px_rgba(249,115,22,0.18)]'
+                    : 'border-slate-200 bg-white hover:border-orange-300 hover:bg-orange-50/50 hover:shadow-xl'
                 }`}
               >
-                <span className="text-3xl">{item.icon}</span>
+                <div className="absolute inset-y-0 left-0 w-1 bg-orange-500 opacity-0 transition duration-500 group-hover:opacity-100" />
+
+                <motion.span
+                  whileHover={{ rotate: 10, scale: 1.15 }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className={`flex h-16 w-16 items-center justify-center rounded-2xl text-3xl shadow-md transition-all duration-500 ${
+                    active === index
+                      ? 'bg-orange-500'
+                      : 'bg-slate-100 group-hover:bg-orange-500'
+                  }`}
+                >
+                  {item.icon}
+                </motion.span>
 
                 <span>
                   <span
@@ -280,57 +557,105 @@ export default function Services() {
                     {item.short}
                   </span>
                 </span>
-              </button>
+              </motion.button>
             ))}
           </div>
 
           <motion.div
             key={selected.title}
-            className="min-h-[560px] rounded-2xl border border-slate-200 bg-slate-50 p-9 shadow-md"
-            initial={{ opacity: 0, x: 18 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.35 }}
+            className="relative min-h-[560px] overflow-hidden rounded-3xl border border-orange-100 bg-gradient-to-br from-orange-50 via-white to-purple-50 p-9 shadow-xl"
+            initial={{ opacity: 0, x: 35, scale: 0.96 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.45, type: 'spring', stiffness: 110 }}
           >
-            <div className="text-4xl">{selected.icon}</div>
+            <motion.div
+              animate={{ scale: [1, 1.15, 1], rotate: [0, 8, 0] }}
+              transition={{ repeat: Infinity, duration: 8, ease: 'easeInOut' }}
+              className="absolute -right-16 -top-16 h-40 w-40 rounded-full bg-orange-300/30 blur-3xl"
+            />
 
-            <h2 className="mt-7 text-2xl font-extrabold text-black">
-              {selected.title}
-            </h2>
+            <div className="relative z-10">
+              <motion.div
+                initial={{ scale: 0.8, rotate: -8 }}
+                animate={{ scale: 1, rotate: 0 }}
+                transition={{ duration: 0.4, type: 'spring' }}
+                className="flex h-20 w-20 items-center justify-center rounded-3xl bg-white text-5xl shadow-lg"
+              >
+                {selected.icon}
+              </motion.div>
 
-            <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
-              {selected.description}
-            </p>
+              <h2 className="mt-7 text-2xl font-extrabold text-black">
+                {selected.title}
+              </h2>
 
-            <h3 className="mt-8 text-base font-bold text-orange-600">
-              Key Features:
-            </h3>
+              <p className="mt-5 max-w-xl text-base leading-7 text-slate-700">
+                {selected.description}
+              </p>
 
-            <ul className="mt-5 space-y-4">
-              {selected.features.map((feature) => (
-                <li
-                  key={feature}
-                  className="flex items-center gap-4 text-base text-slate-700"
-                >
-                  <span className="font-bold text-orange-500">✓</span>
-                  {feature}
-                </li>
-              ))}
-            </ul>
+              <h3 className="mt-8 text-base font-bold text-orange-600">
+                Key Features:
+              </h3>
+
+              <ul className="mt-5 space-y-4">
+                {selected.features.map((feature, index) => (
+                  <motion.li
+                    key={feature}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.35, delay: index * 0.08 }}
+                    className="flex items-center gap-4 rounded-xl bg-white px-4 py-3 text-base text-slate-700 shadow-sm"
+                  >
+                    <span className="flex h-7 w-7 items-center justify-center rounded-full bg-orange-100 font-bold text-orange-500">
+                      ✓
+                    </span>
+                    {feature}
+                  </motion.li>
+                ))}
+              </ul>
+            </div>
           </motion.div>
         </div>
 
         {/* How We Work */}
         <div className="mt-24 text-center">
-          <h2 className="text-3xl font-extrabold text-black">
-            How We Work
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 25 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            <span className="inline-flex rounded-full bg-orange-100 px-5 py-2 text-sm font-bold text-orange-500">
+              Process
+            </span>
+
+            <h2 className="mt-5 text-3xl font-extrabold text-black">
+              How We Work
+            </h2>
+          </motion.div>
 
           <div className="mt-10 grid gap-10 sm:grid-cols-2 lg:grid-cols-5">
-            {workSteps.map((step) => (
-              <div key={step.number} className="flex flex-col items-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-orange-500 text-2xl font-bold text-white shadow-lg">
+            {workSteps.map((step, index) => (
+              <motion.div
+                key={step.number}
+                initial={{ opacity: 0, y: 35, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                whileHover={{ y: -10 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.12,
+                  type: 'spring',
+                  stiffness: 120,
+                }}
+                className="group flex flex-col items-center rounded-2xl bg-white p-5 shadow-sm transition-all duration-500 hover:shadow-xl"
+              >
+                <motion.div
+                  whileHover={{ rotate: 360, scale: 1.08 }}
+                  transition={{ duration: 0.6 }}
+                  className="flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 text-2xl font-bold text-white shadow-lg"
+                >
                   {step.number}
-                </div>
+                </motion.div>
 
                 <h3 className="mt-5 text-lg font-bold text-black">
                   {step.title}
@@ -339,35 +664,50 @@ export default function Services() {
                 <p className="mt-2 max-w-[190px] text-sm leading-6 text-slate-600">
                   {step.text}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
 
         {/* CTA */}
-        <div className="mt-20 rounded-2xl border border-slate-200 bg-slate-50 px-6 py-12 text-center shadow-md">
-          <h2 className="text-3xl font-extrabold text-black">
-            Ready to Transform Your Business?
-          </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          whileHover={{ scale: 1.01 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative mt-20 overflow-hidden rounded-3xl bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 px-6 py-12 text-center shadow-2xl"
+        >
+          <motion.div
+            animate={{ x: [0, 35, 0], y: [0, -25, 0] }}
+            transition={{ repeat: Infinity, duration: 9, ease: 'easeInOut' }}
+            className="absolute left-8 top-8 h-32 w-32 rounded-full bg-white/20 blur-3xl"
+          />
 
-          <p className="mt-4 text-base text-slate-700">
-            Speak to our experts to modernize your systems and accelerate
-            growth.
-          </p>
+          <div className="relative z-10">
+            <h2 className="text-3xl font-extrabold text-white">
+              Ready to Transform Your Business?
+            </h2>
 
-          <NavLink
-            to="/contact"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-orange-500 px-9 py-4 text-sm font-bold text-white transition-all duration-300 hover:bg-orange-600 hover:scale-105"
-          >
-            Contact Our Team
-          </NavLink>
-        </div>
+            <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-white/90">
+              Speak to our experts to modernize your systems and accelerate
+              growth.
+            </p>
+
+            <NavLink
+              to="/contact"
+              className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-9 py-4 text-sm font-bold text-orange-500 shadow-lg transition-all duration-300 hover:scale-105"
+            >
+              Contact Our Team
+            </NavLink>
+          </div>
+        </motion.div>
       </div>
 
-      {/* Scroll Top Button */}
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-        className="fixed bottom-6 right-6 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-2xl text-white shadow-lg transition-all duration-300 hover:bg-orange-600"
+        className="fixed bottom-6 right-6 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-orange-500 text-2xl text-white shadow-lg transition-all duration-300 hover:bg-orange-600"
+        aria-label="Scroll to top"
       >
         ↑
       </button>

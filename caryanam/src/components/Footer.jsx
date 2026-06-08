@@ -222,7 +222,7 @@ export default function Footer() {
 
             <ul className="mt-6 space-y-3 text-sm text-slate-300">
               <li>info@caryanamindia.com</li>
-              <li>+91 9923224600</li>
+              <li>+91 7755994123 </li>
               <li>Pune, India</li>
             </ul>
           </div>

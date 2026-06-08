@@ -627,6 +627,385 @@
 
 
 
+// import { motion } from 'framer-motion'
+// import {
+//   ArrowRight,
+//   Bot,
+//   Cloud,
+//   Code2,
+//   Palette,
+//   Shield,
+//   UserRound,
+// } from 'lucide-react'
+// import { Link } from 'react-router-dom'
+
+// const aboutPoints = [
+//   '🚀 03+ Successful Projects',
+//   '🌐 Global Client Base',
+//   '🧠 10+ Skilled Professionals',
+//   '⭐ 98% Client Satisfaction',
+//   '🏆 Award-Winning Solutions',
+//   '💡 Innovative Approach',
+// ]
+
+// const aboutImages = [
+//   'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80',
+//   'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+//   'https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80',
+//   'https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80',
+// ]
+
+// const services = [
+//   {
+//     title: 'Web & App Development',
+//     description:
+//       'Custom, scalable solutions for web and mobile applications using latest technologies.',
+//     icon: Code2,
+//   },
+//   {
+//     title: 'Cloud Solutions',
+//     description: 'Secure and scalable infrastructure on AWS, Azure, GCP with 24/7 monitoring.',
+//     icon: Cloud,
+//   },
+//   {
+//     title: 'AI & Analytics',
+//     description: 'Insights and automation with intelligent algorithms and machine learning.',
+//     icon: Bot,
+//   },
+//   {
+//     title: 'Cybersecurity',
+//     description: 'End-to-end protection, vulnerability assessment and 24/7 security monitoring.',
+//     icon: Shield,
+//   },
+//   {
+//     title: 'IT Consulting',
+//     description: 'Strategic guidance to optimize cost, performance and digital transformation.',
+//     icon: UserRound,
+//   },
+//   {
+//     title: 'UI/UX Design',
+//     description: 'User-first experiences that drive engagement and improve conversion rates.',
+//     icon: Palette,
+//   },
+// ]
+
+// const projects = [
+//   {
+//     title: 'Cloud Migration for FinTech',
+//     image:
+//       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=900&q=80',
+//   },
+//   {
+//     title: 'E-commerce Platform Development',
+//     image:
+//       'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=900&q=80',
+//   },
+//   {
+//     title: 'AI Chatbot for Healthcare',
+//     image:
+//       'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=900&q=80',
+//   },
+//   {
+//     title: 'Enterprise Cybersecurity Enhancement',
+//     image:
+//       'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=900&q=80',
+//   },
+// ]
+
+// const testimonials = [
+//   {
+//     name: 'Rajesh Kumar',
+//     // image: 'https://randomuser.me/api/portraits/men/32.jpg',
+//     quote:
+//       'Caryanamindia transformed our outdated systems into a robust, cloud-based platform. Their team was professional, knowledgeable, and delivered beyond our expectations. Highly recommend!',
+//   },
+//   {
+//     name: 'Vidya Phatak',
+//     // image: 'https://randomuser.me/api/portraits/women/44.jpg',
+//     quote:
+//       'Their cybersecurity team is outstanding. We had concerns about our data security, but Caryanamindia implemented a comprehensive security framework that made us feel completely secure.',
+//   },
+// ]
+
+// export default function Home() {
+//   return (
+//     <main className="overflow-hidden bg-white text-[#071225]">
+//       <section className="relative flex min-h-[calc(100vh-72px)] items-center justify-center bg-[#071225] px-6 py-24 text-center text-white">
+//         <div
+//           className="absolute inset-0 bg-cover bg-center"
+//           style={{
+//             backgroundImage:
+//               "url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=2400&q=90')",
+//           }}
+//         />
+//         <div className="absolute inset-0 bg-black/45" />
+
+//         <motion.div
+//           initial={{ opacity: 0, y: 30 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.7 }}
+//           className="relative z-10 mx-auto max-w-6xl"
+//         >
+//           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
+//             Empowering Businesses with Cutting-Edge IT Solutions
+//           </h1>
+//           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-white/90">
+//             From cloud computing to AI-driven automation, we deliver technology that drives growth.
+//           </p>
+//           <Link
+//             to="/services"
+//             className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#e94f00]"
+//           >
+//             Our Services <ArrowRight className="h-4 w-4" />
+//           </Link>
+//         </motion.div>
+//       </section>
+
+//       <section className="bg-white px-6 py-20">
+//         <div className="mx-auto max-w-7xl overflow-hidden rounded-3xl border border-[#071225]/10 bg-gradient-to-br from-[#071225] via-[#0d1f39] to-[#071225] p-8 text-white shadow-2xl sm:p-12">
+//           <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+//             <motion.div
+//               initial={{ opacity: 0, x: -24 }}
+//               whileInView={{ opacity: 1, x: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.6 }}
+//             >
+//               <span className="inline-flex rounded-full bg-[#ff5b00]/20 px-4 py-2 text-sm font-bold text-[#ffb27d]">
+//                 🚀 Startup Special Offer
+//               </span>
+
+//               <h2 className="mt-5 text-3xl font-extrabold leading-tight text-white sm:text-5xl">
+//                 Build Your Startup Without Heavy Upfront Costs
+//               </h2>
+
+//               <p className="mt-6 text-lg leading-8 text-white/85">
+//                 Is your startup less than 6 months old? Caryanam India Pvt Ltd helps
+//                 startups build and grow with affordable monthly payment plans instead of
+//                 heavy upfront costs.
+//               </p>
+
+//               <p className="mt-4 text-base leading-7 text-white/75">
+//                 Focus on growing your business while we take care of your technology needs.
+//                 Contact us today for a customized startup package.
+//               </p>
+
+//               <div className="mt-8 flex flex-wrap gap-4">
+//                 <Link
+//                   to="/contact"
+//                   className="inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#e94f00]"
+//                 >
+//                   Get Startup Package <ArrowRight className="h-4 w-4" />
+//                 </Link>
+
+//                 <Link
+//                   to="/services"
+//                   className="inline-flex items-center gap-2 rounded-full border border-white/30 px-7 py-3 text-sm font-bold text-white transition hover:bg-white hover:text-[#071225]"
+//                 >
+//                   View Services <ArrowRight className="h-4 w-4" />
+//                 </Link>
+//               </div>
+//             </motion.div>
+
+//             <motion.div
+//               initial={{ opacity: 0, x: 24 }}
+//               whileInView={{ opacity: 1, x: 0 }}
+//               viewport={{ once: true }}
+//               transition={{ duration: 0.6 }}
+//               className="rounded-3xl bg-white p-6 text-[#071225] shadow-xl sm:p-8"
+//             >
+//               <h3 className="text-2xl font-extrabold text-[#071225]">Our Startup Services</h3>
+
+//               <div className="mt-6 grid gap-3">
+//                 {[
+//                   'Website Development',
+//                   'Mobile App Development (Android & iOS)',
+//                   'Custom Software Solutions',
+//                   'UI/UX Design',
+//                   'Hosting & Cloud Setup',
+//                   'Technical Support & Maintenance',
+//                   'Digital Marketing Support',
+//                 ].map((item) => (
+//                   <p
+//                     key={item}
+//                     className="rounded-xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-700"
+//                   >
+//                     ✅ {item}
+//                   </p>
+//                 ))}
+//               </div>
+
+//               <div className="mt-8 border-t border-slate-200 pt-6">
+//                 <h4 className="font-bold text-[#071225]">Why Choose Us?</h4>
+
+//                 <div className="mt-4 grid gap-3 sm:grid-cols-2">
+//                   {[
+//                     'Low Monthly Payments',
+//                     'Fast Development',
+//                     'Dedicated Support Team',
+//                     'Scalable Solutions',
+//                   ].map((item) => (
+//                     <p
+//                       key={item}
+//                       className="rounded-xl border border-[#ff5b00]/30 px-4 py-3 text-sm font-bold text-[#ff5b00]"
+//                     >
+//                       ✔ {item}
+//                     </p>
+//                   ))}
+//                 </div>
+//               </div>
+//             </motion.div>
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className="mx-auto max-w-7xl px-6 py-20">
+//         <div className="grid gap-14 lg:grid-cols-[1fr_1.1fr] lg:items-center">
+//           <motion.div
+//             initial={{ opacity: 0, x: -24 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ duration: 0.6 }}
+//           >
+//             <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Who We Are</h2>
+//             <p className="mt-5 text-base leading-8 text-slate-700">
+//               Caryanamindia is a leading IT service provider specializing in software development,
+//               cloud infrastructure, and digital transformation. We help businesses leverage technology
+//               to achieve their strategic goals and stay ahead in the digital era.
+//             </p>
+//             <p className="mt-5 text-base leading-8 text-slate-700">
+//               Our team of experts combines technical excellence with business acumen to deliver
+//               solutions that drive real results and create lasting value for our clients.
+//             </p>
+
+//             <div className="mt-8 grid gap-4 sm:grid-cols-2">
+//               {aboutPoints.map((point) => (
+//                 <p key={point} className="text-sm font-medium text-[#071225]">
+//                   {point}
+//                 </p>
+//               ))}
+//             </div>
+
+//             <Link
+//               to="/about"
+//               className="mt-8 inline-flex items-center gap-2 rounded-full border border-[#ff5b00] px-6 py-3 text-sm font-semibold text-[#ff5b00] transition hover:bg-[#ff5b00] hover:text-white"
+//             >
+//               Learn More <ArrowRight className="h-4 w-4" />
+//             </Link>
+//           </motion.div>
+
+//           <motion.div
+//             initial={{ opacity: 0, x: 24 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             transition={{ duration: 0.6 }}
+//             className="grid grid-cols-2 gap-5"
+//           >
+//             {aboutImages.map((image, index) => (
+//               <img
+//                 key={image}
+//                 src={image}
+//                 alt="Caryanamindia team"
+//                 className={`h-40 w-full rounded-2xl object-cover shadow-sm sm:h-44 ${
+//                   index === 1 || index === 2 ? 'mt-8' : ''
+//                 }`}
+//               />
+//             ))}
+//           </motion.div>
+//         </div>
+//       </section>
+
+//       <section className="bg-slate-50 px-6 py-20">
+//         <div className="mx-auto max-w-7xl">
+//           <div className="mx-auto max-w-3xl text-center">
+//             <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Our Services</h2>
+//             <p className="mt-5 text-base leading-7 text-slate-700">
+//               We offer a comprehensive suite of IT services designed to meet your business needs and drive digital transformation.
+//             </p>
+//           </div>
+
+//           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+//             {services.map((service, index) => (
+//               <motion.article
+//                 key={service.title}
+//                 initial={{ opacity: 0, y: 24 }}
+//                 whileInView={{ opacity: 1, y: 0 }}
+//                 viewport={{ once: true, amount: 0.2 }}
+//                 transition={{ duration: 0.5, delay: index * 0.05 }}
+//                 className="rounded-xl border border-[#071225] bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl"
+//               >
+//                 <service.icon className="h-9 w-9 text-[#ff5b00]" />
+//                 <h3 className="mt-7 text-xl font-bold text-[#071225]">{service.title}</h3>
+//                 <p className="mt-4 text-base leading-7 text-slate-700">{service.description}</p>
+//                 <Link
+//                   to="/services"
+//                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff5b00]"
+//                 >
+//                   Learn more <ArrowRight className="h-4 w-4" />
+//                 </Link>
+//               </motion.article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       <section className="mx-auto max-w-7xl px-6 py-20">
+//         <div className="mx-auto max-w-3xl text-center">
+//           <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Our Recent Projects</h2>
+//           <p className="mt-5 text-base leading-7 text-slate-700">
+//             Explore some of our successful projects that have helped businesses transform and grow.
+//           </p>
+//         </div>
+
+//         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+//           {projects.map((project) => (
+//             <article key={project.title} className="group relative h-56 overflow-hidden rounded-xl shadow-sm">
+//               <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+//               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+//               <h3 className="absolute bottom-6 left-5 right-5 text-lg font-bold text-white">{project.title}</h3>
+//             </article>
+//           ))}
+//         </div>
+//       </section>
+
+//       <section className="bg-slate-50 px-6 py-20">
+//         <div className="mx-auto max-w-5xl">
+//           <div className="text-center">
+//             <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">What Our Clients Say</h2>
+//             <p className="mt-5 text-base text-slate-700">
+//               Don't just take our word for it. Here's what our clients have to say about working with us.
+//             </p>
+//           </div>
+
+//           <div className="mt-12 grid gap-8 md:grid-cols-2">
+//             {testimonials.map((item) => (
+//               <article key={item.name} className="rounded-xl border border-[#071225] bg-white p-8 shadow-sm">
+//                 <div className="text-xl tracking-widest text-[#ff5b00]">★★★★★</div>
+//                 <p className="mt-5 text-lg leading-8 text-[#071225]">&quot;{item.quote}&quot;</p>
+//                 <div className="mt-8 flex items-center gap-4">
+//                   <img src={item.image} alt={item.name} className="h-12 w-12 rounded-full object-cover" />
+//                   <p className="font-bold text-[#071225]">{item.name}</p>
+//                 </div>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </section>
+
+//       <Link
+//         to="#"
+//         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+//         className="fixed bottom-8 right-8 z-50 flex h-12 w-12 items-center justify-center rounded-full bg-[#ff5b00] text-white shadow-lg transition hover:bg-[#e94f00]"
+//         aria-label="Back to top"
+//       >
+//         ↑
+//       </Link>
+//     </main>
+//   )
+// }
+
+
+
+
 import { motion } from 'framer-motion'
 import {
   ArrowRight,
@@ -715,13 +1094,11 @@ const projects = [
 const testimonials = [
   {
     name: 'Rajesh Kumar',
-    // image: 'https://randomuser.me/api/portraits/men/32.jpg',
     quote:
       'Caryanamindia transformed our outdated systems into a robust, cloud-based platform. Their team was professional, knowledgeable, and delivered beyond our expectations. Highly recommend!',
   },
   {
     name: 'Vidya Phatak',
-    // image: 'https://randomuser.me/api/portraits/women/44.jpg',
     quote:
       'Their cybersecurity team is outstanding. We had concerns about our data security, but Caryanamindia implemented a comprehensive security framework that made us feel completely secure.',
   },
@@ -749,9 +1126,11 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold leading-tight tracking-tight sm:text-6xl lg:text-7xl">
             Empowering Businesses with Cutting-Edge IT Solutions
           </h1>
+
           <p className="mx-auto mt-5 max-w-3xl text-lg leading-8 text-white/90">
             From cloud computing to AI-driven automation, we deliver technology that drives growth.
           </p>
+
           <Link
             to="/services"
             className="mt-8 inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-7 py-3 text-sm font-bold text-white shadow-lg transition hover:bg-[#e94f00]"
@@ -867,11 +1246,13 @@ export default function Home() {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Who We Are</h2>
+
             <p className="mt-5 text-base leading-8 text-slate-700">
               Caryanamindia is a leading IT service provider specializing in software development,
               cloud infrastructure, and digital transformation. We help businesses leverage technology
               to achieve their strategic goals and stay ahead in the digital era.
             </p>
+
             <p className="mt-5 text-base leading-8 text-slate-700">
               Our team of experts combines technical excellence with business acumen to deliver
               solutions that drive real results and create lasting value for our clients.
@@ -914,33 +1295,109 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-slate-50 px-6 py-20">
-        <div className="mx-auto max-w-7xl">
-          <div className="mx-auto max-w-3xl text-center">
-            <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Our Services</h2>
+      <section className="relative overflow-hidden bg-slate-50 px-6 py-20">
+        <motion.div
+          animate={{
+            y: [0, -30, 0],
+            x: [0, 20, 0],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 8,
+            ease: 'easeInOut',
+          }}
+          className="absolute left-10 top-20 h-40 w-40 rounded-full bg-orange-200/40 blur-3xl"
+        />
+
+        <motion.div
+          animate={{
+            y: [0, 35, 0],
+            x: [0, -25, 0],
+          }}
+          transition={{
+            repeat: Infinity,
+            duration: 10,
+            ease: 'easeInOut',
+          }}
+          className="absolute bottom-20 right-10 h-48 w-48 rounded-full bg-[#071225]/10 blur-3xl"
+        />
+
+        <div className="relative z-10 mx-auto max-w-7xl">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mx-auto max-w-3xl text-center"
+          >
+            <span className="inline-flex rounded-full bg-[#ff5b00]/10 px-4 py-2 text-sm font-bold text-[#ff5b00]">
+              What We Provide
+            </span>
+
+            <h2 className="mt-5 text-3xl font-extrabold text-[#071225] sm:text-4xl">
+              Our Services
+            </h2>
+
             <p className="mt-5 text-base leading-7 text-slate-700">
               We offer a comprehensive suite of IT services designed to meet your business needs and drive digital transformation.
             </p>
-          </div>
+          </motion.div>
 
           <div className="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <motion.article
                 key={service.title}
-                initial={{ opacity: 0, y: 24 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: 35, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                whileHover={{
+                  y: -12,
+                  scale: 1.03,
+                }}
                 viewport={{ once: true, amount: 0.2 }}
-                transition={{ duration: 0.5, delay: index * 0.05 }}
-                className="rounded-xl border border-[#071225] bg-white p-8 transition hover:-translate-y-1 hover:shadow-xl"
+                transition={{
+                  duration: 0.6,
+                  delay: index * 0.12,
+                  type: 'spring',
+                  stiffness: 120,
+                }}
+                className="group relative overflow-hidden rounded-2xl border border-[#071225]/20 bg-white p-8 shadow-sm transition-all duration-500 hover:border-[#ff5b00]/60 hover:shadow-[0_20px_50px_rgba(255,91,0,0.25)]"
               >
-                <service.icon className="h-9 w-9 text-[#ff5b00]" />
-                <h3 className="mt-7 text-xl font-bold text-[#071225]">{service.title}</h3>
-                <p className="mt-4 text-base leading-7 text-slate-700">{service.description}</p>
+                <div className="absolute inset-x-0 top-0 h-1 bg-[#ff5b00] opacity-0 transition duration-500 group-hover:opacity-100" />
+
+                <motion.div
+                  whileHover={{
+                    rotate: 10,
+                    scale: 1.15,
+                  }}
+                  transition={{ type: 'spring', stiffness: 300 }}
+                  className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#ff5b00]/10 text-[#ff5b00] transition duration-500 group-hover:bg-[#ff5b00] group-hover:text-white"
+                >
+                  <service.icon className="h-9 w-9" />
+                </motion.div>
+
+                <h3 className="mt-7 text-xl font-bold text-[#071225]">
+                  {service.title}
+                </h3>
+
+                <p className="mt-4 text-base leading-7 text-slate-700">
+                  {service.description}
+                </p>
+
                 <Link
                   to="/services"
                   className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#ff5b00]"
                 >
-                  Learn more <ArrowRight className="h-4 w-4" />
+                  Learn more
+                  <motion.span
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{
+                      repeat: Infinity,
+                      duration: 1.2,
+                      ease: 'easeInOut',
+                    }}
+                  >
+                    <ArrowRight className="h-4 w-4" />
+                  </motion.span>
                 </Link>
               </motion.article>
             ))}
@@ -950,7 +1407,9 @@ export default function Home() {
 
       <section className="mx-auto max-w-7xl px-6 py-20">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">Our Recent Projects</h2>
+          <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">
+            Our Recent Projects
+          </h2>
           <p className="mt-5 text-base leading-7 text-slate-700">
             Explore some of our successful projects that have helped businesses transform and grow.
           </p>
@@ -958,10 +1417,19 @@ export default function Home() {
 
         <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {projects.map((project) => (
-            <article key={project.title} className="group relative h-56 overflow-hidden rounded-xl shadow-sm">
-              <img src={project.image} alt={project.title} className="h-full w-full object-cover transition duration-500 group-hover:scale-110" />
+            <article
+              key={project.title}
+              className="group relative h-56 overflow-hidden rounded-xl shadow-sm"
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="h-full w-full object-cover transition duration-500 group-hover:scale-110"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
-              <h3 className="absolute bottom-6 left-5 right-5 text-lg font-bold text-white">{project.title}</h3>
+              <h3 className="absolute bottom-6 left-5 right-5 text-lg font-bold text-white">
+                {project.title}
+              </h3>
             </article>
           ))}
         </div>
@@ -970,7 +1438,9 @@ export default function Home() {
       <section className="bg-slate-50 px-6 py-20">
         <div className="mx-auto max-w-5xl">
           <div className="text-center">
-            <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">What Our Clients Say</h2>
+            <h2 className="text-3xl font-extrabold text-[#071225] sm:text-4xl">
+              What Our Clients Say
+            </h2>
             <p className="mt-5 text-base text-slate-700">
               Don't just take our word for it. Here's what our clients have to say about working with us.
             </p>
@@ -978,11 +1448,15 @@ export default function Home() {
 
           <div className="mt-12 grid gap-8 md:grid-cols-2">
             {testimonials.map((item) => (
-              <article key={item.name} className="rounded-xl border border-[#071225] bg-white p-8 shadow-sm">
+              <article
+                key={item.name}
+                className="rounded-xl border border-[#071225] bg-white p-8 shadow-sm"
+              >
                 <div className="text-xl tracking-widest text-[#ff5b00]">★★★★★</div>
-                <p className="mt-5 text-lg leading-8 text-[#071225]">&quot;{item.quote}&quot;</p>
-                <div className="mt-8 flex items-center gap-4">
-                  <img src={item.image} alt={item.name} className="h-12 w-12 rounded-full object-cover" />
+                <p className="mt-5 text-lg leading-8 text-[#071225]">
+                  &quot;{item.quote}&quot;
+                </p>
+                <div className="mt-8">
                   <p className="font-bold text-[#071225]">{item.name}</p>
                 </div>
               </article>
