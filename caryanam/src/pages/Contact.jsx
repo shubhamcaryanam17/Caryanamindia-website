@@ -103,8 +103,8 @@ export default function Contact() {
 
               <p>
                 📞 <span className="font-bold text-[#0f1b2d]">Phone:</span>{' '}
-                <a href="tel:+919561117241" className="text-[#ff5b00]">
-                  +91-9561117241
+                <a href="tel:+917755994123" className="text-[#ff5b00]">
+                 +91-7755994123
                 </a>
               </p>
 
@@ -120,8 +120,8 @@ export default function Contact() {
 
               <p>
                 🔗 <span className="font-bold text-[#0f1b2d]">LinkedIn:</span>{' '}
-                <span className="font-bold text-blue-600">in</span>{' '}
-                <a href="#" className="text-[#ff5b00]">
+                
+                <a href="https://in.linkedin.com/company/caryanamindia-pvt-ltd" target="_blank" rel="noopener noreferrer" className="text-[#ff5b00]">
                   Caryanamindia India Pvt. Ltd.
                 </a>
               </p>

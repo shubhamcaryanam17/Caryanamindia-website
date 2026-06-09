@@ -363,10 +363,145 @@
 // }
 
 
+// import { useState } from 'react'
+// import { motion } from 'framer-motion'
+// import { NavLink } from 'react-router-dom'
+// import { ArrowRight, Menu, X } from 'lucide-react'
+// import logo from '../assets/Caryanamindialogo.jpeg'
+
+// const navItems = [
+//   { label: 'Home', to: '/' },
+//   { label: 'About', to: '/about' },
+//   { label: 'Services', to: '/services' },
+//   { label: 'Gallery', to: '/gallery' },
+//   { label: 'Events', to: '/events' },
+//   { label: 'Contact', to: '/contact' },
+// ]
+
+// export default function Navbar() {
+//   const [open, setOpen] = useState(false)
+
+//   return (
+//     <motion.nav
+//       className="sticky top-0 z-50 border-b border-[#071225]/10 bg-white/95 backdrop-blur-xl transition-colors duration-300"
+//       initial={{ y: -32, opacity: 0 }}
+//       animate={{ y: 0, opacity: 1 }}
+//       transition={{ duration: 0.5, ease: 'easeOut' }}
+//     >
+//       <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
+//         {/* Logo */}
+//         <NavLink
+//           to="/"
+//           className="flex items-center gap-3 transition-all duration-300 hover:opacity-90"
+//           onClick={() => setOpen(false)}
+//         >
+//           <img
+//             src={logo}
+//             alt="Caryanam India Logo"
+//             className="h-14 w-14 rounded-full border border-[#071225]/10 object-cover"
+//           />
+
+//           <div className="hidden sm:block">
+//             <h1 className="text-lg font-bold tracking-wider text-[#071225]">
+//               CARYANAMINDIA
+//             </h1>
+//           </div>
+//         </NavLink>
+
+//         {/* Desktop Menu */}
+//         <div className="hidden items-center gap-8 md:flex">
+//           {navItems.map((item) => (
+//             <NavLink
+//               key={item.to}
+//               to={item.to}
+//               end={item.to === '/'}
+//               className={({ isActive }) =>
+//                 `text-sm font-medium transition-colors duration-300 ${
+//                   isActive
+//                     ? 'text-[#ff5b00]'
+//                     : 'text-slate-600 hover:text-[#ff5b00]'
+//                 }`
+//               }
+//             >
+//               {item.label}
+//             </NavLink>
+//           ))}
+//         </div>
+
+//         {/* Desktop CTA */}
+//         <div className="hidden items-center gap-3 md:flex">
+//           <NavLink
+//             to="/contact"
+//             className="inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:scale-105 hover:bg-[#e14f00]"
+//           >
+//             Get Started
+//             <ArrowRight className="h-4 w-4" />
+//           </NavLink>
+//         </div>
+
+//         {/* Mobile Menu Button */}
+//         <button
+//           type="button"
+//           className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#071225]/10 bg-white text-[#071225] transition-colors duration-300 hover:border-[#ff5b00] hover:text-[#ff5b00] md:hidden"
+//           onClick={() => setOpen((value) => !value)}
+//           aria-label="Toggle menu"
+//           aria-expanded={open}
+//         >
+//           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+//         </button>
+//       </div>
+
+//       {/* Mobile Menu */}
+//       {open && (
+//         <motion.div
+//           className="border-t border-[#071225]/10 bg-white px-6 py-5 md:hidden"
+//           initial={{ opacity: 0, y: -12 }}
+//           animate={{ opacity: 1, y: 0 }}
+//           exit={{ opacity: 0, y: -12 }}
+//           transition={{ duration: 0.25 }}
+//         >
+//           <div className="flex flex-col gap-3">
+//             {navItems.map((item) => (
+//               <NavLink
+//                 key={item.to}
+//                 to={item.to}
+//                 end={item.to === '/'}
+//                 onClick={() => setOpen(false)}
+//                 className={({ isActive }) =>
+//                   `rounded-3xl px-4 py-3 text-sm font-medium transition-colors duration-300 ${
+//                     isActive
+//                       ? 'bg-orange-50 text-[#ff5b00] ring-1 ring-inset ring-orange-200'
+//                       : 'text-slate-600 hover:bg-orange-50 hover:text-[#ff5b00]'
+//                   }`
+//                 }
+//               >
+//                 {item.label}
+//               </NavLink>
+//             ))}
+
+//             <div className="pt-3">
+//               <NavLink
+//                 to="/contact"
+//                 className="inline-flex w-full items-center justify-center rounded-full bg-[#ff5b00] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:bg-[#e14f00]"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 Get Started
+//               </NavLink>
+//             </div>
+//           </div>
+//         </motion.div>
+//       )}
+//     </motion.nav>
+//   )
+// }
+
+
+
+
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
-import { ArrowRight, Menu, X } from 'lucide-react'
+import { ArrowRight, Menu, X, Mail, MapPin, Phone, Facebook, Instagram, Linkedin, Globe } from 'lucide-react'
 import logo from '../assets/Caryanamindialogo.jpeg'
 
 const navItems = [
@@ -382,115 +517,154 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <motion.nav
-      className="sticky top-0 z-50 border-b border-[#071225]/10 bg-white/95 backdrop-blur-xl transition-colors duration-300"
-      initial={{ y: -32, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5, ease: 'easeOut' }}
-    >
-      <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
-        {/* Logo */}
-        <NavLink
-          to="/"
-          className="flex items-center gap-3 transition-all duration-300 hover:opacity-90"
-          onClick={() => setOpen(false)}
+    <header className="sticky top-0 z-50 flex w-full flex-col">
+      {/* Top Contact Bar */}
+      <div className="hidden h-10 w-full bg-[#1a1a1a] text-sm text-white md:flex lg:h-12">
+        {/* Left Orange Section with slanted cut */}
+        <div
+          className="flex flex-1 items-center justify-end bg-[#ff5b00] px-4 lg:px-8"
+          style={{ clipPath: "polygon(0 0, 100% 0, calc(100% - 30px) 100%, 0 100%)" }}
         >
-          <img
-            src={logo}
-            alt="Caryanam India Logo"
-            className="h-14 w-14 rounded-full border border-[#071225]/10 object-cover"
-          />
-
-          <div className="hidden sm:block">
-            <h1 className="text-lg font-bold tracking-wider text-[#071225]">
-              CARYANAMINDIA
-            </h1>
+          <div className="mr-8 flex items-center gap-4 pr-2 font-medium lg:mr-12 lg:gap-8 lg:pr-8">
+            <div className="flex items-center gap-2">
+              <Mail className="h-4 w-4" />
+              <span className="hidden sm:inline">info@caryanamindia.com</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <MapPin className="h-4 w-4" />
+              <span className="hidden lg:inline">Pune, India</span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Phone className="h-4 w-4" />
+              <span className="hidden sm:inline">+91-7755994123</span>
+            </div>
           </div>
-        </NavLink>
-
-        {/* Desktop Menu */}
-        <div className="hidden items-center gap-8 md:flex">
-          {navItems.map((item) => (
-            <NavLink
-              key={item.to}
-              to={item.to}
-              end={item.to === '/'}
-              className={({ isActive }) =>
-                `text-sm font-medium transition-colors duration-300 ${
-                  isActive
-                    ? 'text-[#ff5b00]'
-                    : 'text-slate-600 hover:text-[#ff5b00]'
-                }`
-              }
-            >
-              {item.label}
-            </NavLink>
-          ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden items-center gap-3 md:flex">
-          <NavLink
-            to="/contact"
-            className="inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:scale-105 hover:bg-[#e14f00]"
-          >
-            Get Started
-            <ArrowRight className="h-4 w-4" />
-          </NavLink>
-        </div>
+        {/* Right Dark Section (Social Icons) */}
+        <div className="flex w-40 items-center justify-center gap-4 bg-[#1a1a1a] lg:w-64 lg:gap-6">
+          <a href="#" className="transition-colors hover:text-[#ff5b00]">
+            <Facebook className="h-4 w-4" />
+          </a>
+          <a href="" className="transition-colors hover:text-[#ff5b00]">
+            <Instagram className="h-4 w-4" />
+          </a>
+          <a href="https://in.linkedin.com/company/caryanamindia-pvt-ltd" target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-[#ff5b00]">
+            <Linkedin className="h-4 w-4" />
+          </a>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#071225]/10 bg-white text-[#071225] transition-colors duration-300 hover:border-[#ff5b00] hover:text-[#ff5b00] md:hidden"
-          onClick={() => setOpen((value) => !value)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        </div>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <motion.div
-          className="border-t border-[#071225]/10 bg-white px-6 py-5 md:hidden"
-          initial={{ opacity: 0, y: -12 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.25 }}
-        >
-          <div className="flex flex-col gap-3">
+      {/* Main Navigation */}
+      <motion.nav
+        className="border-b border-[#071225]/10 bg-white/95 backdrop-blur-xl transition-colors duration-300"
+        initial={{ y: -32, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+      >
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6 py-4">
+          {/* Logo */}
+          <NavLink
+            to="/"
+            className="flex items-center gap-3 transition-all duration-300 hover:opacity-90"
+            onClick={() => setOpen(false)}
+          >
+            <img
+              src={logo}
+              alt="Caryanam India Logo"
+              className="h-14 w-14 rounded-full border border-[#071225]/10 object-cover"
+            />
+
+            <div className="hidden sm:block">
+              <h1 className="text-lg font-bold tracking-wider text-[#071225]">
+                CARYANAMINDIA
+              </h1>
+            </div>
+          </NavLink>
+
+          {/* Desktop Menu */}
+          <div className="hidden items-center gap-8 lg:flex">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
                 to={item.to}
                 end={item.to === '/'}
-                onClick={() => setOpen(false)}
                 className={({ isActive }) =>
-                  `rounded-3xl px-4 py-3 text-sm font-medium transition-colors duration-300 ${
-                    isActive
-                      ? 'bg-orange-50 text-[#ff5b00] ring-1 ring-inset ring-orange-200'
-                      : 'text-slate-600 hover:bg-orange-50 hover:text-[#ff5b00]'
+                  `text-md font-medium transition-colors duration-300 ${isActive
+                    ? 'text-[#ff5b00]'
+                    : 'text-slate-600 hover:text-[#ff5b00]'
                   }`
                 }
               >
                 {item.label}
               </NavLink>
             ))}
-
-            <div className="pt-3">
-              <NavLink
-                to="/contact"
-                className="inline-flex w-full items-center justify-center rounded-full bg-[#ff5b00] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:bg-[#e14f00]"
-                onClick={() => setOpen(false)}
-              >
-                Get Started
-              </NavLink>
-            </div>
           </div>
-        </motion.div>
-      )}
-    </motion.nav>
+
+          {/* Desktop CTA */}
+          <div className="hidden items-center gap-3 lg:flex">
+            <NavLink
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-[#ff5b00] px-5 py-2 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:scale-105 hover:bg-[#e14f00]"
+            >
+              Get Started
+              <ArrowRight className="h-4 w-4" />
+            </NavLink>
+          </div>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[#071225]/10 bg-white text-[#071225] transition-colors duration-300 hover:border-[#ff5b00] hover:text-[#ff5b00] lg:hidden"
+            onClick={() => setOpen((value) => !value)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
+
+        {/* Mobile Menu */}
+        {open && (
+          <motion.div
+            className="border-t border-[#071225]/10 bg-white px-6 py-5 lg:hidden"
+            initial={{ opacity: 0, y: -12 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.25 }}
+          >
+            <div className="flex flex-col gap-3">
+              {navItems.map((item) => (
+                <NavLink
+                  key={item.to}
+                  to={item.to}
+                  end={item.to === '/'}
+                  onClick={() => setOpen(false)}
+                  className={({ isActive }) =>
+                    `rounded-3xl px-4 py-3 text-sm font-medium transition-colors duration-300 ${isActive
+                      ? 'bg-orange-50 text-[#ff5b00] ring-1 ring-inset ring-orange-200'
+                      : 'text-slate-600 hover:bg-orange-50 hover:text-[#ff5b00]'
+                    }`
+                  }
+                >
+                  {item.label}
+                </NavLink>
+              ))}
+
+              <div className="pt-3">
+                <NavLink
+                  to="/contact"
+                  className="inline-flex w-full items-center justify-center rounded-full bg-[#ff5b00] px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-orange-200 transition-all duration-300 hover:bg-[#e14f00]"
+                  onClick={() => setOpen(false)}
+                >
+                  Get Started
+                </NavLink>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </motion.nav>
+    </header>
   )
 }

@@ -168,7 +168,7 @@ export default function Footer() {
               <Linkedin className="h-5 w-5" />
             </a> */}
             <a
-  href="https://www.linkedin.com/search/results/all/?keywords=caryanamindia%20pvt%20ltd&origin=RICH_QUERY_TYPEAHEAD_HISTORY&spellCorrectionEnabled=true&heroEntityKey=urn%3Ali%3Aorganization%3A122383917&position=0"
+  href="https://in.linkedin.com/company/caryanamindia-pvt-ltd"
   target="_blank"
   rel="noopener noreferrer"
   aria-label="LinkedIn"
