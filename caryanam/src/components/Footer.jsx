@@ -133,7 +133,7 @@ const links = [
   { label: 'About', to: '/about' },
   { label: 'Services', to: '/services' },
   { label: 'Gallery', to: '/gallery' },
-  { label: 'Events', to: '/events' },
+ 
   { label: 'Contact', to: '/contact' },
 ]
 
